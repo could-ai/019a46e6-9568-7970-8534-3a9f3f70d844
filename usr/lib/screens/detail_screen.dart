@@ -82,7 +82,7 @@ class _DetailScreenState extends State<DetailScreen> {
             Text('Apellidos: ${widget.resident.apellidos}'),
             Text('Cédula: ${widget.resident.cedula}'),
             Text('Fecha de Nacimiento: ${widget.resident.fechaNacimiento.day}/${widget.resident.fechaNacimiento.month}/${widget.resident.fechaNacimiento.year}'),
-            Text('Edad: ${widget.edad}'),
+            Text('Edad: ${widget.resident.edad}'),
             TextField(controller: _telefonoController, decoration: const InputDecoration(labelText: 'Teléfono')),
             TextField(controller: _direccionController, decoration: const InputDecoration(labelText: 'Dirección')),
             Row(children: [

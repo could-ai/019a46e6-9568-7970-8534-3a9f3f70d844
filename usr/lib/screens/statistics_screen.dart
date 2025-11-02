@@ -51,7 +51,7 @@ class _StatisticsScreenState extends State<StatisticsScreen> {
       totals[calle] = 0;
     }
     for (var stat in _stats) {
-      totals[stat['calle']] = (totals[stat['calle']] ?? 0) + stat['count'];
+      totals[stat['calle']] = (totals[stat['calle']] ?? 0) + (stat['count'] as int);
     }
     return totals;
   }

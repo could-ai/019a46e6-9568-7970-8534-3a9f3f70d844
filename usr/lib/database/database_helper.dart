@@ -1,6 +1,6 @@
 import 'package:sqflite/sqflite.dart';
 import 'package:path/path.dart' as p;
-import 'package:path_provider/path_provider.dart' as pp;
+import '../models/resident.dart';
 
 class DatabaseHelper {
   static final DatabaseHelper _instance = DatabaseHelper._internal();
@@ -17,7 +17,7 @@ class DatabaseHelper {
   }
 
   Future<Database> _initDatabase() async {
-    final dbPath = await pp.getDatabasesPath();
+    final dbPath = await getDatabasesPath();
     String path = p.join(dbPath, 'residentes.db');
     return await openDatabase(
       path,
